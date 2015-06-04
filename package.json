@@ -1,0 +1,32 @@
+{
+  "name": "listenedui",
+  "version": "1.0.0",
+  "description": "Listened UI webapp",
+  "main": "src/server/index.js",
+  "scripts": {
+    "start": "nodemon --harmony src/server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claym/listenedui.git"
+  },
+  "keywords": [
+    "podcast",
+    "react",
+    "flux",
+    "isomorphic",
+    "koa",
+    "jwt",
+    "client"
+  ],
+  "author": "Clay Mitchell <clay@pfd.net>",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/claym/listenedui/issues"
+  },
+  "homepage": "https://github.com/claym/listenedui#readme",
+  "dependencies": {
+    "koa": "^0.21.0",
+    "koa-route": "^2.4.1"
+  }
+}
