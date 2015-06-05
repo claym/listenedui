@@ -1,11 +1,17 @@
-var koa = require('koa');
-var route = require('koa-route');
+'use strict';
+
+import config from '../config';
+
+import koa from 'koa';
+
+import koaconfig from '../config/koa.js';
+import koaroute from '../config/routes.js';
 
 var app = koa();
 
-app.use(route.get('/', index));
-app.use(route.get('/about', about));
+koaconfig(app);
+koaroute(app);
 
-app.listen(8000, () => {
-    console.log('Listened UI started on port 8001');
+app.listen(config.app.port, () => {
+    console.log('Listened UI started on port', config.app.port);
 });

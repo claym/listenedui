@@ -1,0 +1,24 @@
+default:
+  port: 8000
+  api: https://api.listened.io
+  oauth:
+    url: /oauth/token
+    client:
+      id: client_id
+      password: 123456
+
+PRODUCTION: &production
+  port: #{process.env.PORT}
+  api: #{process.env.API}
+  oauth:
+    client:
+      id: #{process.env.oauth_client_id}
+      password: #{process.env.oauth_client_password}
+  morgan:
+    format: combined
+
+TEST:
+  <<: *production
+
+DEV:
+  <<: *production
